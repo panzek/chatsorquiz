@@ -39,7 +39,54 @@
 
     {% block page_header %} 
     {% endblock %} 
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+              <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+              <a class="navbar-brand" href="#">
+                <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                Chat-or-Quiz
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link text-black" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                        <div class="text-center">
+                            <div><i class="fa-solid fa-house" aria-hidden="true"></i></div>
+                            
+                            <span class="my-0">Account</span>
+                          
+                        </div>
+                      </a>
+                  </li>
+                  
+                  <li class="nav-item dropdown">
+                    <a class="nav-link text-black" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                      <div class="text-center">
+                          <div><i class="fas fa-user fa-lg" aria-hidden="true"></i></div>
+                          
+                          <span class="my-0">Account</span>
+                        
+                      </div>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Register</a></li>
+                      <li><a class="dropdown-item" href="#">Login</a></li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+                
+              </div>
+            </div>
+          </nav>
+    </header>
     
+
     {% block content %}
     <!-- Content goes here   -->
     {% endblock %} 
