@@ -20,6 +20,7 @@
     {% endblock %} 
 
     {% block extra_css %} 
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     <!-- JavaScript -->
@@ -39,7 +40,8 @@
     {% block page_header %} 
     {% endblock %} 
     
-    {% block content %} 
+    {% block content %}
+    <!-- Content goes here   -->
     {% endblock %} 
 
     {% block postloadjs %}

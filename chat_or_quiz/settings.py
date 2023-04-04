@@ -157,9 +157,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-
+# tells django to use cloudinary to store MEDIA and STATIC files
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]  # needs to be a tuple - done with the last comma
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Static files (images - Photos)
