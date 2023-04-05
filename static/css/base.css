@@ -7,3 +7,12 @@
 body {
     background-color: aquamarine;
 }
+
+/* Keep footer fixed at the bottom of the page  */
+footer {
+    background-color: red;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+  }
