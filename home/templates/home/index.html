@@ -6,15 +6,52 @@
 {% block content %}
 {% load cloudinary %} 
 
-<div class="container">
-    <div class="row">
-        <div>   
-            <div>
-                <h1>
-                    <em>Welcome to Chat-or-Quiz</em>
-                </h1>
+<main class="home-container">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-12 mb-2">
+                <img src="" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
             </div>
+            <div class="col=12">   
+                <div class="text-uppercase fw-bold">Authentication Required</div>
+                <div>
+                    Please login or register. <br>Only logged in users can access <br>Chat-or-Quiz app. Thank You!
+                </div>
+            </div>
+            <div class="col=12 py-4">   
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <a class="btn btn-primary" href="{% url 'account_signup' %}" aria-label="Go to account signup page" type="button"><i class="fa-solid fa-users" aria-hidden="true"></i> Register</a>
+                    <a class="btn btn-secondary" href="{% url 'account_login' %}" aria-label="Go to account login page" type="button"><i class="fa-solid fa-lock" aria-hidden="true"></i> Login</a>
+                  </div>
+            </div>
+            <div>
+                <ul class="navbar-nav mx-auto mt-5">      
+                    <li class="nav-item">      
+                        <a href="https://twitter.com/ipanzek" target="_blank" rel="noopener" aria-label="Go to Developer's Twitter page (opens new tab on third party site)" title="Twitter">
+                            <span style="font-size: 2em; color: black;" class="p-3">
+                                <i class="fab fa-twitter-square" aria-hidden="true"></i>
+                            </span>
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                        <a href="https://linkedin.com/panzek" target="_blank" rel="noopener" aria-label="Go to Developer's LinkedIn page (opens new tab on third party site)" title="LinkedIn">
+                            <span style="font-size: 2em; color: black;" class="p-3">
+                                <i class="fab fa-linkedin-square" aria-hidden="true"></i>
+                            </span>
+                            <span class="sr-only">LinkedIn</span>
+                        </a>
+                        <a href="https://twitter.com/ipanzek" target="_blank" rel="noopener" aria-label="Go to Developer's GitHub page (opens new tab on third party site)" title="GitHub">
+                            <span style="font-size: 2em; color: black;" class="p-3">
+                                <i class="fab fa-github-square" aria-hidden="true"></i>
+                            </span>
+                            <span class="sr-only">GitHub</span>
+                        </a>
+                        <div class="social-networks-title mt-2">(c) Panzek 2023. All Rights Reserved.</div>
+                    </li> 
+                </ul>
+            </div>
+           
         </div>
     </div>
+</main>
 
 {% endblock %}
