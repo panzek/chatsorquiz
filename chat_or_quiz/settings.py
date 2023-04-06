@@ -63,6 +63,9 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.apple',
     'allauth.socialaccount.providers.facebook',
 
+    'crispy_forms',
+    'crispy_bootstrap5',
+
 
     'home',
 ]
@@ -84,6 +87,10 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'chat_or_quiz.urls'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 TEMPLATES = [
     {

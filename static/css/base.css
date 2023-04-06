@@ -13,8 +13,31 @@
     width: 100vw;
 }
 
+.account-container {
+    margin: 0;
+    top: 10%;
+    position: absolute;
+    min-width: 100vw;
+}
+
 .home-social-media a {
     text-decoration: none;
+}
+
+/* forms */
+.sign-in-form_or-divider {
+    display: flex;
+    align-items: center;
+    margin: 16px 0;
+    padding: 0 12px;
+}
+
+.sign-in-form_or-divider:before,
+.sign-in-form_or-divider:after {
+    background-color: lightgray;
+    content: "";
+    height: 1px;
+    width: 30%;
 }
 
 /* Keep footer fixed at the bottom of the page  */
