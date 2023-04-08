@@ -10,7 +10,7 @@
     margin: 0;
     top: 20%;
     position: absolute;
-    width: 100vw;
+    min-width: 100vw;
 }
 
 .account-container {
