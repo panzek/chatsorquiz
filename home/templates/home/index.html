@@ -7,6 +7,31 @@
 {% load cloudinary %} 
 
 <main class="home-container">
+
+    <!-- Chat and Quiz Landing page -->
+    {% if user.is_authenticated %}
+    <div class="container text-center">
+        <div class="row col-md-6 mx-auto">
+            <div class="col-12 mb-2">
+                <img src="" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            </div>
+            <div class="col=12">   
+                <div class="text-uppercase fw-bold">Hey, welcome to Chat-Or-Quiz!</div>
+                <div>
+                    Choose the game to play. <br>And best of luck. Thank You!
+                </div>
+            </div>
+            <div class="col-12 py-4">
+                <div class="btn-group text-center py-3 col-6 mx-auto">
+                    <a class="btn btn-chat me-2" href="" aria-label="Go to account signup page" type="button"> Chat</a>
+                    <a class="btn btn-quiz me-2" href="" aria-label="Go to account signup page" type="button"> Quiz</a>  
+                </div>
+                <p>Disclaimer: This website was created <br>for educational purposes only.</p>
+            </div>
+        </div> 
+    </div> 
+    <!-- Chat and Quiz Landing page ends -->
+    {% else %}
     <div class="container text-center">
         <div class="row">
             <div class="col-12 mb-2">
@@ -51,6 +76,7 @@
             </div>
         </div>
     </div>
+    {% endif %}
 </main>
 
 {% endblock %}

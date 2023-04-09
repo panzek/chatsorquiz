@@ -40,6 +40,24 @@
     width: 30%;
 }
 
+.btn-chat {
+    background-color: #ffc107;
+}
+
+.btn-chat:hover {
+    background-color: #ffcd3b;
+}
+
+.btn-quiz {
+    background-color: #6f42c1;
+    color: #ffc107;
+}
+
+.btn-quiz:hover {
+    background-color: #6610f2;
+    color: #ffc107;
+}
+
 /* Keep footer fixed at the bottom of the page  */
 footer {
     background-color: red;
