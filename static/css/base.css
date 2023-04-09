@@ -20,7 +20,7 @@
     min-width: 100vw;
 }
 
-.home-social-media a {
+.social-networks a {
     text-decoration: none;
 }
 
@@ -60,7 +60,8 @@
 
 /* Keep footer fixed at the bottom of the page  */
 footer {
-    background-color: red;
+    background-color: #000;
+    color: #ced4da;
     position: fixed;
     bottom: 0px;
     left: 0px;
