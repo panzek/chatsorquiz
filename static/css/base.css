@@ -4,6 +4,15 @@
     margin: 0;
 }
 
+body {
+    font-family: "Roboto",sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    background: #fff;
+    height: 100vh;
+    width: 100vw;
+}
+
 /* homepage */
 
 .home-container {
@@ -38,6 +47,11 @@
     content: "";
     height: 1px;
     width: 30%;
+}
+
+.bg-navbar {
+    background: #ebf0f4;
+   
 }
 
 .btn-chat {

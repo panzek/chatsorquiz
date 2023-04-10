@@ -41,47 +41,43 @@
     {% endblock %} 
 
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-          {% if user.is_authenticated %}
-            <div class="container">
-              <a class="navbar-brand" href="#">
-                <img src="" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-                Chat-or-Quiz
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link text-black" data-bs-toggle="dropdown" href="{% url 'home' %}" role="button" aria-expanded="false">
-                        <div class="text-center">
-                            <div><i class="fa-solid fa-house" aria-hidden="true"></i></div>
-                            <span class="my-0">Home</span>
-                        </div>
-                      </a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link text-black" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-                      <div class="text-center">
-                          <div><i class="fas fa-user fa-lg" aria-hidden="true"></i></div>
-                          <span class="my-0">Account</span>
-                      </div>
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Chat</a></li>
-                      <li><a class="dropdown-item" href="#">Quiz</a></li>
-                      <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
-                    </ul>
-                  </li>
+      {% if user.is_authenticated %}
+      <nav class="navbar navbar-expand-lg bg-navbar" id="navItems">
+        <div class="container">
+            <!-- Logo -->
+          <a class="navbar-brand" href="{% url 'home' %}">
+            <img src="https://res.cloudinary.com/dxjcjyynt/image/upload/v1681147358/chat-or-quiz-logo_kyuukd.webp" alt="chat-or-quiz Logo" width="50" >
+            Chat-or-Quiz
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarItems" aria-controls="navbarItems" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Navbar items -->
+          <div class="collapse navbar-collapse" id="navbarItems">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'home' %}" aria-label="Go to home page">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="" aria-label="Go to about page">Contact</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Account
+                </a>
+                <ul class="dropdown-menu text-center">
+                  <li><a class="dropdown-item" href="#">Chat</a></li>
+                  <li><a class="dropdown-item" href="#">Quiz</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
                 </ul>
-                
-              </div>
-            </div>
-            {% endif %}
-          </nav>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      {% endif %}
     </header>
-    
 
     {% block content %}
     <!-- Content goes here   -->
