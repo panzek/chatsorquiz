@@ -42,7 +42,7 @@
 
     <header>
       {% if user.is_authenticated %}
-      <nav class="navbar navbar-expand-lg bg-navbar" id="navItems">
+      <nav class="navbar navbar-expand-lg " id="navItems">
         <div class="container">
             <!-- Logo -->
           <a class="navbar-brand" href="{% url 'home' %}">
@@ -62,13 +62,14 @@
                   <a class="nav-link" href="" aria-label="Go to about page">Contact</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Account
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                  My Account
                 </a>
-                <ul class="dropdown-menu text-center">
+                <ul class="dropdown-menu dropdown-menu-lg-end text-center">
+                  <li class="bg-light ">Hey, {{ user | capfirst }}!</li>
+                  <li class="dropdown-divider my-0"></li>
                   <li><a class="dropdown-item" href="#">Chat</a></li>
                   <li><a class="dropdown-item" href="#">Quiz</a></li>
-                  <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
                 </ul>
               </li>
