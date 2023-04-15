@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block title %} Feedback - Chat-or-Quiz {% endblock %}
+
+{% block content %}
+{% load cloudinary %} 
+
+<main>
+    <div class="container text-center">
+        <div class="row col-12 col-md-6 mx-auto">
+            <div class="col-12 d-none d-md-block mb-2">
+                <img src="" alt="Logo" width="50" class="d-inline-block align-text-top">
+            </div>
+            <div class="fw-bold">Leave a Feedback</div>
+            <div class="mb-3">
+                I created this app for educational purpose, <br>
+                using the following tech stack: JavaScript, Python, Django, Bootstrap, CSS, and HTML...<br>
+                Did it meet your expectations?
+            </div>
+            <form class="login" method="POST" action="">
+                {% csrf_token %}
+                <div class="row form-floating mx-auto"> 
+                    <div class="form-floating">
+                    {{ form|crispy }}
+                    </div>           
+                    <div class="btn-group login-signup-btn w-100 text-center py-3">
+                        
+                        <button class="btn btn-danger" type="submit" aria-label="Go to account signup page" >Submit Feedback</button>
+                    </div>
+                    <div class="mt-1"><small>Please note that by filling this form, you agree to allow <br>Chat-or-Quiz to use this date to improve this app.</small></div>
+                </div>
+            </form>
+        </div> 
+    </div> 
+</main>
+
+{% endblock %}
