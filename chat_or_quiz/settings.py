@@ -60,8 +60,9 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     # ... include the providers you want to enable:
-    'allauth.socialaccount.providers.apple',
+    'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.github',
 
     'crispy_forms',
     'crispy_bootstrap5',
@@ -70,7 +71,7 @@ INSTALLED_APPS = [
     'home',
 ]
 
-SITE_ID = 1
+SITE_ID = 2
 
 # allauth registration settings
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
