@@ -36,19 +36,43 @@ body {
 }
 
 /* forms */
+
+.btn-login-signup {
+    background-color: #b02a37;
+    color: #fff;
+}
+
+.btn-login-signup:hover {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.sign-in-form_divider {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.sign-in-form_divider:before,
+.sign-in-form_divider:after {
+    background-color: #b02a37;
+    content: "";
+    height: 1px;
+    width: 35%;
+}
+
 .sign-in-form_or-divider {
     display: flex;
     align-items: center;
     margin: 16px 0;
-    padding: 0 12px;
 }
 
 .sign-in-form_or-divider:before,
 .sign-in-form_or-divider:after {
-    background-color: lightgray;
+    background-color:#ced4da;
     content: "";
     height: 1px;
-    width: 30%;
+    width: 45%;
 }
 
 .bg-navbar {

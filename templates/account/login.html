@@ -11,21 +11,19 @@
 {% block content %}
 <main class="account-container">
 <div class="container">
-  <div class="row col-12 mx-auto">
+  <div class="row mx-auto">
     <div class="col-md-6 mx-auto">
       <div class="text-center">
         <img src="" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
       </div>
-      <div class="sign-in-form_or-divider">
+      <div class="sign-in-form_divider">
         <h2 class="login-or mx-auto font-weight-bold">{% trans "Sign In" %}</h2>
       </div>
-
-      <div class="login-or mb-3 text-center">{% trans "Don't have a Chat-or-Quiz account?" %} <a href="{{ signup_url }}">Sign up</a></div>
       
         <form class="login" method="POST" action="{% url 'account_login' %}">
           {% csrf_token %}
 
-          <div class="row form-floating mx-auto"> 
+          <div class="row form-floating"> 
             <div class="form-floating">
               {{ form.login|as_crispy_field }}
             </div>           
@@ -33,12 +31,12 @@
               {{ form.password|as_crispy_field }}
             </div> 
             <div class="row">
-              <div class="col-6">
+              <div class="col-8">
                 <div class="form-floating">
                   {{ form.remember|as_crispy_field }}
                 </div>
               </div>
-              <div class="col-6">
+              <div class="col-4 me-0">
                 <div>
                   <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
                 </div>
@@ -47,8 +45,8 @@
             {% if redirect_field_value %}
               <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
             {% endif %}
-          <div class="btn-group login-signup-btn w-100 text-center py-2">
-            <button class="primaryAction btn btn-danger" type="submit" aria-label="Go to account signup page" >{% trans "Sign In" %}</button>
+          <div class="btn-group login-signup-btn w-100 text-center mt-2">
+            <button class="primaryAction btn btn-login-signup" type="submit" aria-label="Go to account signup page" >{% trans "Sign In" %}</button>
           </div>
         </div>
         </form>
@@ -74,6 +72,7 @@
           </a>
         </div>
         {% endif %}
+        <div class="login-or mb-3 text-center">{% trans "Don't have a Chat-or-Quiz account?" %} <a href="{{ signup_url }}">Sign up</a></div>
     </div>
   </div>
 </div>
