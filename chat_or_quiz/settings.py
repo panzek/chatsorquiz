@@ -71,7 +71,7 @@ INSTALLED_APPS = [
     'home',
 ]
 
-SITE_ID = 2
+SITE_ID = 3
 
 # allauth registration settings
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
@@ -159,6 +159,17 @@ SOCIALACCOUNT_PROVIDERS = {
         'VERIFIED_EMAIL': False,
         'VERSION': 'v13.0',
         'GRAPH_API_URL': 'https://graph.facebook.com/v13.0',
+    },
+    
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        },
+        'OAUTH_PKCE_ENABLED': True,
     }
 }
 
