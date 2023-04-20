@@ -9,10 +9,11 @@
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
-<main class="account-container">
-<div class="container">
-  <div class="row mx-auto">
-    <div class="col-md-6 mx-auto">
+<!-- <main class="account-container"> -->
+<!-- <div class="container">
+  <div class="row"> -->
+    <!-- <div class="col-md-6 rounded shadow-sm bg-white mx-auto">
+
       <div class="text-center">
         <img src="" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
       </div>
@@ -73,8 +74,137 @@
         </div>
         {% endif %}
         <div class="login-or mb-3 text-center">{% trans "Don't have a Chat-or-Quiz account?" %} <a href="{{ signup_url }}">Sign up</a></div>
+    </div> -->
+  <!-- </div>
+</div> -->
+<!-- uuu  -->
+<!-- <div class="card mx-auto" style="width: 30rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body"> -->
+    <!-- <h5 class="card-title">Card title</h5> -->
+    <!-- <div class="sign-in-form_divider">
+      <h5 class="card-title login-or mx-auto font-weight-bold">{% trans "Sign In" %}</h5>
+    </div>
+    <form class="login" method="POST" action="{% url 'account_login' %}">
+      {% csrf_token %}
+
+      <div class="row form-floating"> 
+        <div class="form-floating">
+          {{ form.login|as_crispy_field }}
+        </div>           
+        <div class="form-floating">
+          {{ form.password|as_crispy_field }}
+        </div> 
+        <div class="row">
+          <div class="col-8">
+            <div class="form-floating">
+              {{ form.remember|as_crispy_field }}
+            </div>
+          </div>
+          <div class="col-4 me-0">
+            <div>
+              <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+            </div>
+          </div>
+        </div>
+        {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+      <div class="btn-group login-signup-btn w-100 text-center mt-2">
+        <button class="primaryAction btn btn-login-signup" type="submit" aria-label="Go to account signup page" >{% trans "Sign In" %}</button>
+      </div>
+    </div>
+    </form>
+    <div class="sign-in-form_or-divider">
+      <span class="login-or mx-auto font-weight-bold">{% trans 'or' %}</span>
+    </div>
+    {% get_providers as socialaccount_providers %}
+
+  {% if socialaccount_providers %}
+  <div class="d-grid gap-2 mb-3">
+    <a title="Google" class="btn btn-dark socialaccount_provider google border-outline bg-light text-dark" href="{% provider_login_url 'google' %}" aria-label="Go to account signup page" type="button">
+      <i class="fa-brands fa-google fa-lg" ></i>
+      Sign in with Google
+    </a>
+    <a title="Facebook" class="btn btn-primary socialaccount_provider facebook" href="{% provider_login_url 'facebook' %}" aria-label="Go to account signup page" type="button">
+      <i class="fa-brands fa-facebook fa-lg" style="color: #fff;"></i>
+      Sign in with Facebook
+    </a>
+    <a title="GitHub" class="btn btn-dark socialaccount_provider github" href="{% provider_login_url 'github' %}" aria-label="Go to account signup page" type="button">
+      <i class="fa-brands fa-github fa-lg" style="color: #fff;"></i>
+      Sign in with GitHub
+    </a>
+  </div>
+  {% endif %}
+  <div class="login-or mb-3 text-center">{% trans "Don't have a Chat-or-Quiz account?" %} <a href="{{ signup_url }}">Sign up</a></div>
+  </div>
+</div> -->
+
+<main  class="row mx-auto">
+  <div class="col-12 col-md-6  mx-auto">
+    <div class="card main-page">
+      <div class="card-body">
+        <div class="text-center">
+          <img src="" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        </div>
+        <div class="sign-in-form_divider">
+          <h5 class="card-title login-or mx-auto font-weight-bold">{% trans "Sign In" %}</h5>
+        </div>
+        <form class="login" method="POST" action="{% url 'account_login' %}">
+          {% csrf_token %}
+    
+          <div class="row form-floating"> 
+            <div class="form-floating">
+              {{ form.login|as_crispy_field }}
+            </div>           
+            <div class="form-floating">
+              {{ form.password|as_crispy_field }}
+            </div> 
+            <div class="d-flex justify-content-end">
+              <div class="col-8">
+                <div class="form-floating">
+                  {{ form.remember|as_crispy_field }}
+                </div>
+              </div>
+              <div class="col-4">
+                  <a class="button text-danger secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+              </div>
+            </div>
+            {% if redirect_field_value %}
+              <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+            {% endif %}
+          <div class="btn-group login-signup-btn w-100 text-center mt-1">
+            <button class="primaryAction btn btn-login-signup" type="submit" aria-label="Go to account signup page" >{% trans "Sign In" %}</button>
+          </div>
+        </div>
+        </form>
+        <div class="sign-in-form_or-divider">
+          <span class="mx-auto font-weight-bold">{% trans 'or' %}</span>
+        </div>
+        {% get_providers as socialaccount_providers %}
+    
+        {% if socialaccount_providers %}
+        <div class="d-grid gap-2 mb-3">
+          <a title="Google" class="btn btn-dark socialaccount_provider google border-outline bg-light text-dark" href="{% provider_login_url 'google' %}" aria-label="Go to account signup page" type="button">
+            <i class="fa-brands fa-google fa-lg" ></i>
+            Sign in with Google
+          </a>
+          <a title="Facebook" class="btn btn-primary socialaccount_provider facebook" href="{% provider_login_url 'facebook' %}" aria-label="Go to account signup page" type="button">
+            <i class="fa-brands fa-facebook fa-lg" style="color: #fff;"></i>
+            Sign in with Facebook
+          </a>
+          <a title="GitHub" class="btn btn-dark socialaccount_provider github" href="{% provider_login_url 'github' %}" aria-label="Go to account signup page" type="button">
+            <i class="fa-brands fa-github fa-lg" style="color: #fff;"></i>
+            Sign in with GitHub
+          </a>
+        </div>
+        {% endif %}
+        <div class="text-center">{% trans "Don't have a Chat-or-Quiz account?" %} <a href="{{ signup_url }}">Sign up</a></div>
+      </div>
     </div>
   </div>
-</div>
 </main>
+<!-- </div> -->
+
+<!-- </main> -->
 {% endblock %}
