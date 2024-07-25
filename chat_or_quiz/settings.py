@@ -34,7 +34,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = os.environ.get('DEVELOPMENT', False) == 'True'
 
 ALLOWED_HOSTS = ['chatsorquiz.ipanzek.com', 'localhost', '127.0.0.1']
 
@@ -132,7 +132,7 @@ WSGI_APPLICATION = 'chat_or_quiz.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        'default': dj_database_url.config(default=os.environ.get('DATABASE_URL')),
     }
 else:
     DATABASES = {
