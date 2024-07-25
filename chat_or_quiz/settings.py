@@ -36,7 +36,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['chat-or-quiz.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['chat-or-quiz.ipanzek.com', 'localhost', '127.0.0.1']
 
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
